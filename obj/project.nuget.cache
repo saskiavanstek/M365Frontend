@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t9GUrYgMefk=",
+  "dgSpecHash": "9ov1k/XTY+M=",
   "success": true,
-  "projectFilePath": "D:\\AppBackUp\\M365App Complete working\\M365TrainingApp\\M365TrainingApp.csproj",
+  "projectFilePath": "D:\\GitHub\\M365Frontend\\M365TrainingApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\s.vanstek\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\s.vanstek\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

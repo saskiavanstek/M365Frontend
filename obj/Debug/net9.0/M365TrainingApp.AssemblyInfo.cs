@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("M365TrainingApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+987dbe8659b91e6270281c3359cf1ce60dc27b47")]
 [assembly: System.Reflection.AssemblyProductAttribute("M365TrainingApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("M365TrainingApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AppBackUp\\M365App Complete working\\M365TrainingApp\\M365TrainingApp.csproj": {}
+    "D:\\GitHub\\M365Frontend\\M365TrainingApp.csproj": {}
   },
   "projects": {
-    "D:\\AppBackUp\\M365App Complete working\\M365TrainingApp\\M365TrainingApp.csproj": {
+    "D:\\GitHub\\M365Frontend\\M365TrainingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AppBackUp\\M365App Complete working\\M365TrainingApp\\M365TrainingApp.csproj",
+        "projectUniqueName": "D:\\GitHub\\M365Frontend\\M365TrainingApp.csproj",
         "projectName": "M365TrainingApp",
-        "projectPath": "D:\\AppBackUp\\M365App Complete working\\M365TrainingApp\\M365TrainingApp.csproj",
+        "projectPath": "D:\\GitHub\\M365Frontend\\M365TrainingApp.csproj",
         "packagesPath": "C:\\Users\\s.vanstek\\.nuget\\packages\\",
-        "outputPath": "D:\\AppBackUp\\M365App Complete working\\M365TrainingApp\\obj\\",
+        "outputPath": "D:\\GitHub\\M365Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\s.vanstek\\AppData\\Roaming\\NuGet\\NuGet.Config"
