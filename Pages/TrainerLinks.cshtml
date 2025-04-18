@@ -1,0 +1,45 @@
+@page
+@model LabTrainer.Pages.TrainerLinksModel
+
+<form method="get">
+    <div class="form-group">
+        <label for="sessieId">Sessie ID:</label>
+        <input type="number" id="sessieId" name="sessieId" class="form-control" value="@Model.SessieId" />
+    </div>
+    <div class="form-group">
+        <label for="klantId">Klant ID:</label>
+        <input type="number" id="klantId" name="klantId" class="form-control" value="@Model.KlantId" />
+    </div>
+    <div class="form-group">
+        <label for="startDatum">Startdatum:</label>
+        <input type="date" id="startDatum" name="startDatum" class="form-control" value="@Model.StartDatum?.ToString("yyyy-MM-dd")" />
+    </div>
+    <div class="form-group">
+        <label for="eindDatum">Einddatum:</label>
+        <input type="date" id="eindDatum" name="eindDatum" class="form-control" value="@Model.EindDatum?.ToString("yyyy-MM-dd")" />
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="actieveLinks" value="true" checked="@Model.ActieveLinks" />
+            Actieve links
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Filteren</button>
+</form>
+
+@if (Model.Links != null && Model.Links.Any())
+{
+    <ul>
+        @foreach (var link in Model.Links)
+        {
+            <li>
+                <a href="@link.UniqueLink">@link.UniqueLink</a>
+                (Sessie ID: @link.TrainingSessionId, Klant ID: @link.KlantId, Einddatum: @link.TrainingSession.ExpiryDate)
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Geen links gevonden.</p>
+}

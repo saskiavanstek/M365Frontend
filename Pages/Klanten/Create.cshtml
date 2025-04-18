@@ -1,0 +1,39 @@
+@page
+@model LabTrainer.Pages.Klanten.CreateModel
+@{
+    ViewData["Title"] = "Klant toevoegen";
+}
+
+<h1>Klant toevoegen</h1>
+
+@if (!string.IsNullOrEmpty(Model.SuccessMessage))
+{
+    <div class="alert alert-success">
+        @Model.SuccessMessage
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
+    </div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Klant.KlantNaam" class="form-label"></label>
+        <input asp-for="Klant.KlantNaam" class="form-control" />
+        <span asp-validation-for="Klant.KlantNaam" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-3">
+        <label asp-for="Klant.KlantDetails" class="form-label"></label>
+        <textarea asp-for="Klant.KlantDetails" class="form-control"></textarea>
+        <span asp-validation-for="Klant.KlantDetails" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Klant aanmaken</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

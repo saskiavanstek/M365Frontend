@@ -1,0 +1,40 @@
+@page
+@model LabTrainer.Pages.Trainer.SessionLinksModel
+
+<div class="container">
+    <h2>Deelnemers Links voor Sessie: @Model.SelectedSession.RepositoryName</h2>
+
+    @if (Model.SelectedSession != null)
+    {
+        <p><strong>Startdatum:</strong> @Model.SelectedSession.StartDate.ToString("dd-MM-yyyy")</p>
+        <p><strong>Actief:</strong> @(Model.SelectedSession.IsActive ? "Ja" : "Nee")</p>
+
+        <h3>Deelnemers:</h3>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Deelnemer Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var participant in Model.SelectedSession.Participants)
+                {
+                    <tr>
+                        <td>@participant.UniqueLink</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Knoppen -->
+        <div class="mt-4">
+            <a href="/Trainer/Calendar" class="btn btn-primary">Terug naar Kalender</a>
+            
+        </div>
+    }
+    else
+    {
+        <p>Geen sessie gevonden.</p>
+    }
+</div>

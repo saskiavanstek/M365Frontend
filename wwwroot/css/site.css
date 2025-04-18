@@ -1,0 +1,181 @@
+/* site.css */
+
+/* Existing body styles */
+body {
+  display: flex;
+  flex-direction: column; /* Forceer verticale stapeling van body-elementen */
+  overflow-x: hidden;
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+
+.sidemenu {
+  width: 50px; /* Ingeklapt */
+  background-color: #f8f9fa; /* Licht thema achtergrond */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  padding-top: 60px; /* Ruimte voor de hamburgerknop */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Voorkom krimpen */
+  z-index: 1; /* Boven de content */
+}
+
+.sidemenu.open {
+  width: 200px;
+}
+
+.content-wrapper {
+  flex-grow: 1; /* Laat de wrapper de verticale ruimte innemen */
+  margin-left: 50px;
+  transition: margin-left 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Zorg ervoor dat de inhoud binnen de wrapper verticaal is */
+  min-height: 100vh;
+}
+
+body.sidemenu-open .content-wrapper {
+  margin-left: 200px; /* Ruimte voor het uitgeklapte menu */
+}
+
+/* Header and body styling */
+.app-header {
+  background-color: #f8f9fa; /* Licht thema achtergrond */
+  color: #333; /* Licht thema tekstkleur */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  border-bottom: 1px solid #eee;
+}
+
+/* .container and footer styling */
+.container {
+  padding: 20px;
+  flex-grow: 1; /* Laat de container groeien binnen de wrapper */
+}
+
+.main-content {
+  padding-top: 60px; /* Enough space to clear the fixed header */
+  padding-bottom: 3rem !important;
+  flex-grow: 1; /* Laat de main content groeien binnen de container */
+  background-color: #ffffff; /* Default light background */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  padding-top: 40px; /* pushes main content below header */
+}
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme .app-header {
+  background-color: #121212;
+}
+
+body.dark-theme .main-content {
+  background-color: #121212; /* Dark background for main content */
+}
+
+body.dark-theme .footer {
+  background-color: #121212; /* Dark footer background */
+  color: #ccc;
+}
+
+/* Dark theme sidebar */
+body.dark-theme .sidemenu {
+  background-color: #2c2f38; /* Dark sidebar */
+}
+
+body.dark-theme .sidemenu.open {
+  background-color: #23272b; /* Dark sidebar when expanded */
+}
+
+/* Dark theme table styling */
+body.dark-theme table {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-theme table thead {
+  background-color: #2b2b2b;
+}
+
+body.dark-theme table th,
+body.dark-theme table td {
+  border-color: #444;
+}
+
+/* Dark theme form styling */
+body.dark-theme .form-control {
+  background-color: #2b2b2b;
+  color: #fff;
+  border-color: #555;
+}
+
+body.dark-theme .form-control::placeholder {
+  color: #bbb;
+}
+
+body.dark-theme label {
+  color: #fff;
+}
+
+body.dark-theme .btn-primary {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+body.dark-theme .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+body.dark-theme .table {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-theme .table thead {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+body.dark-theme .table tbody tr {
+  border-color: #444;
+}
+
+body.dark-theme .table {
+  --bs-table-bg: #1e1e1e;
+  --bs-table-color: #ffffff;
+  --bs-table-border-color: #444;
+  --bs-table-striped-bg: #2b2b2b;
+  --bs-table-striped-color: #ffffff;
+  --bs-table-hover-bg: #333333;
+  --bs-table-hover-color: #ffffff;
+}
+
+.btn-learn-module {
+  background-color: #0078d4;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-learn-module:hover {
+  background-color: #005fa1;
+}

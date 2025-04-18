@@ -1,0 +1,54 @@
+@page
+@model LabTrainer.Pages.AlleLinksModel
+
+<div class="container">
+
+    <h2>Deelnemers Links</h2>
+
+    <form method="get">
+        <div class="form-group">
+            <label for="klantIdFilter">Klant:</label>
+            <select class="form-control" id="klantIdFilter" name="klantIdFilter">
+                <option value="">Alle klanten</option>
+                @foreach (var klant in Model.Klanten)
+                {
+                    <option value="@klant.Value" selected="@(Model.KlantIdFilter?.ToString() == klant.Value ? "selected" : null)">
+                        @klant.Text
+                    </option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="startDatumFilter">Start Datum:</label>
+            <input type="date" class="form-control" id="startDatumFilter" name="startDatumFilter" value="@(Model.StartDatumFilter?.ToString("yyyy-MM-dd"))" />
+        </div>
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Deelnemer Link</th>
+                <th>Klant Naam</th>
+                <th>Training</th>
+                <th>Start Datum</th>
+                <th>Eind Datum</th>
+                <th>Actief</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var link in Model.Links)
+            {
+                <tr>
+                    <td>@link.UniqueLink</td>
+                    <td>@link.KlantNaam</td>
+                    <td>@link.RepositoryName</td>
+                    <td>@link.StartDateFormatted</td>
+                    <td>@link.ExpiryDateFormatted</td>
+                    <td>@link.ActiefTekst</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

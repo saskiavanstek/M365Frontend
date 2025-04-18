@@ -1,0 +1,27 @@
+{
+  "name": "m365trainingapp_latest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saskiavanstek/M365TrainingRazor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saskiavanstek/M365TrainingRazor/issues"
+  },
+  "homepage": "https://github.com/saskiavanstek/M365TrainingRazor#readme",
+  "description": "",
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.17",
+    "@fullcalendar/daygrid": "^6.1.17"
+  }
+}

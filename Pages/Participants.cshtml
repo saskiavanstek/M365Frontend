@@ -1,0 +1,65 @@
+@page "/Participants/{SessionId}/{RepositoryId}"
+@model LabTrainer.Pages.ParticipantsModel
+
+@{
+    Layout = "_StudentLayout";
+}
+
+<h1>Student Labs voor</h1>
+<h2>@Model.RepositoryId</h2>
+
+@if (!string.IsNullOrEmpty(Model.LearnModuleLink))
+{
+    <p>
+        <a href="@Model.LearnModuleLink" class="btn btn-primary" target="_blank">
+            Ga naar de bijbehorende Microsoft Learn module
+        </a>
+    </p>
+}
+
+@if (!string.IsNullOrEmpty(Model.VerloopBericht))
+{
+    <p class="error">@Model.VerloopBericht</p>
+}
+else if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <p class="error">@Model.ErrorMessage</p>
+}
+else if (Model.FilesAndFolders == null)
+{
+    <p><em>Student labs laden...</em></p>
+}
+else
+{
+    <form method="post">
+        <select asp-for="SelectedFilePath" onchange="this.form.submit()">
+            <option value="">Selecteer een lab...</option>
+            @foreach (var item in Model.FilesAndFolders)
+            {
+                @if (item.IsFolder)
+                {
+                    <optgroup label="@item.Name">
+                        @if (item.SubItems != null)
+                        {
+                            @foreach (var subItem in item.SubItems)
+                            {
+                                <option value="@subItem.Path">@subItem.Name</option>
+                            }
+                        }
+                    </optgroup>
+                }
+                else
+                {
+                    <option value="@item.Path">@item.Name</option>
+                }
+            }
+        </select>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.MarkdownContent))
+    {
+        <div class="markdown-content">
+            @Html.Raw(Model.MarkdownContent)
+        </div>
+    }
+}

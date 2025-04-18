@@ -1,0 +1,46 @@
+@page
+@model LabTrainer.Pages.Trainer.ParticipantLinksModel
+
+<div class="container">
+    <h2>Deelnemers Links</h2>
+
+    <form method="get">
+        <div class="form-group">
+            <label for="sessionFilter">Kies een sessie:</label>
+            <select class="form-control" id="sessionFilter" name="sessionFilter">
+                <option value="">-- Selecteer een sessie --</option>
+                @foreach (var session in Model.SessionsWithParticipants)
+                {
+                    <option value="@session.Id" selected="@(Model.SessionFilter == session.Id ? "selected" : null)">
+                        @session.RepositoryName (@session.StartDate.ToString("dd-MM-yyyy"))
+                    </option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Toon deelnemers</button>
+    </form>
+
+    @if (Model.SelectedSession != null)
+    {
+        <hr />
+        <h4>Geselecteerde sessie: @Model.SelectedSession.RepositoryName</h4>
+        <p><strong>Startdatum:</strong> @Model.SelectedSession.StartDate.ToString("dd-MM-yyyy")</p>
+        <p><strong>Actief:</strong> @(Model.SelectedSession.IsActive ? "Ja" : "Nee")</p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Deelnemer Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var participant in Model.SelectedSession.Participants)
+                {
+                    <tr>
+                        <td>@participant.UniqueLink</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

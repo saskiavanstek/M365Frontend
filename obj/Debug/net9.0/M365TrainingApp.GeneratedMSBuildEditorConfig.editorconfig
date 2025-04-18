@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = M365TrainingApp
+build_property.RootNamespace = M365TrainingApp
+build_property.ProjectDir = D:\AppBackUp\M365App Complete working\M365TrainingApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\AppBackUp\M365App Complete working\M365TrainingApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/AlleLinks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsZUxpbmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Klanten/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xhbnRlblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/ParticipantLinks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljaXBhbnRMaW5rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Participants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljaXBhbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Shared/_StudentLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9TdHVkZW50TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Trainer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/TrainerLinks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5lckxpbmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Trainer/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5lclxDYWxlbmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Trainer/SessionLinks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5lclxTZXNzaW9uTGlua3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppBackUp/M365App Complete working/M365TrainingApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-i2oqfg1yyl

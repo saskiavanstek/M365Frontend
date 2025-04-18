@@ -1,0 +1,62 @@
+@page
+@model LabTrainer.Pages.TrainerModel
+
+<h1>Maak deelnemers links aan</h1>
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label for="RepositoryName">Training:</label>
+        <select class="form-control" asp-for="RepositoryName" asp-items="Model.RepositoryOptions">
+            <option value="">Selecteer een training</option>
+        </select>
+        <span asp-validation-for="RepositoryName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="KlantId">Selecteer een klant:</label>
+        <select asp-for="KlantId" asp-items="@(new SelectList(Model.Klanten, "KlantId", "KlantNaam"))" class="form-control">
+            <option value="">Selecteer een klant</option>
+        </select>
+        <span asp-validation-for="KlantId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="StartDate">Start Datum:</label>
+        <input type="date" class="form-control" asp-for="StartDate" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="ExpiryDate">Eind Datum:</label>
+        <input type="date" class="form-control" asp-for="ExpiryDate" />
+        <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="NumberOfParticipants">Aantal deelnemers:</label>
+        <input type="number" class="form-control" asp-for="NumberOfParticipants" id="NumberOfParticipants" />
+        <span asp-validation-for="NumberOfParticipants" class="text-danger"></span>
+    </div><br>
+
+    <button type="submit" class="btn-primary">Maak trainingssessie aan</button>
+   
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-success">
+        @Model.Message
+    </div>
+
+    @if (Model.ParticipantLinks != null && Model.ParticipantLinks.Any())
+    {
+        <ul>
+            @foreach (var link in Model.ParticipantLinks)
+            {
+                <li>@link</li>
+            }
+        </ul>
+    }
+}
